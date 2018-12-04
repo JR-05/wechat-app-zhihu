@@ -1,0 +1,33 @@
+<!--pages/register/register.wxml-->
+<form>
+     <!-- 头像 -->
+     <view style='text-align: center'>
+          <image class='select_image' src='{{tempImagePath}}' mode='scaleToFill' bindtap='chooseImage'></image>
+     </view>
+     <!-- 用户名 -->
+     <view class='input_view'>
+          <image src='/images/user.png' style='width: 50rpx;height:50rpx;'></image>
+          <input id='username' value='{{userName}}' bindinput='inputListener' placeholder='用户名' maxlength='6'></input>
+     </view>
+     <!-- 日期选择 -->
+     <view class='input_view'>
+          <picker mode="date" value="{{date}}" start="1990-01-01" end="2018-12-05" bindchange="bindDateChange">
+               <view style='display:flex'>
+                    <image src='/images/brithday.png' style='width: 55rpx;height:55rpx;'></image>
+                    <input id='brithday' value='{{brithDay}}' disabled='true' bindinput='inputListener' placeholder='生日（如：1997-06-12）' maxlength='10'></input>
+               </view>
+          </picker>
+     </view>
+     <!-- 密码 -->
+     <view class='input_view'>
+          <image src='/images/password.png' style='width: 45rpx;height:45rpx;'></image>
+          <input id='password' value='{{password}}' bindinput='inputListener' placeholder='密码' maxlength='12' password='true'></input>
+     </view>
+     <!-- 确认密码 -->
+     <view class='input_view'>
+          <image src='/images/password.png' style='width: 45rpx;height:45rpx;'></image>
+          <input id='passwordConfirm' value='{{passwordConfirm}}' bindinput='inputListener' placeholder='{{notifyMessage}}' placeholder-style='color:{{nitifyColor}}' maxlength='12' password='true'></input>
+     </view>
+     <text>注册表示同意《我的服务协议》</text>
+     <button class='register_btn' form-type='submit' bindtap='register'>注册</button>
+</form>

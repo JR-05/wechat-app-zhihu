@@ -1,0 +1,135 @@
+/**index.wxss**/
+
+.banners {
+     width: 100%;
+     height: 200px;
+}
+
+.banner {
+     position: relative;
+}
+
+.banner-image {
+     width: 100%;
+     height: 100%;
+}
+
+.banner-title {
+     color: #fff;
+     width: 100%;
+     padding-left: 16px;
+     padding-right: 16px;
+     bottom: 30px;
+     font-size: 16px;
+     left: 0;
+     position: absolute;
+}
+
+.container {
+     width: 100%;
+     background-color: #fff;
+     /* 内容居中 */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.sortType-item {
+     width: 93%;
+     height: 80rpx;
+     background-color: #fff;
+     border-bottom: 2rpx solid #f6f6f6;
+     display: flex;
+     align-items: center; /*垂直居中*/
+     justify-content: space-between; /*将子元素排列在轴线两端*/
+}
+
+.sortType-item .text_left {
+     font-size: 0.83rem;
+     font-weight: bold;
+}
+
+.sortType-item .text_right {
+     float: right;
+     font-size: 0.7rem;
+     color: #848fa5;
+}
+
+.question-container-item {
+     width: 93%;
+     background-color: #fff;
+     border-bottom: 2rpx solid #f6f6f6;
+     padding-bottom: 25rpx;
+}
+
+.title_view {
+     margin-top: 25rpx;
+     margin-bottom: 25rpx;
+}
+
+.title_view text {
+     height: 150rpx;
+     font-weight: bold;
+     margin: 5rpx 0;
+}
+
+.author_view {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-top: 20rpx;
+     margin-bottom: 20rpx;
+}
+
+.author_view .author_image {
+     width: 45rpx;
+     height: 45rpx;
+     margin-right: 15rpx;
+}
+
+.author_view .author_name {
+     font-weight: bold;
+     font-size: 0.75rem;
+     position: absolute;
+     left: 80rpx;
+}
+
+.author_view .time {
+     font-size: 0.75rem;
+     color: #a8a8a8;
+}
+
+/* 设置内容高度，需要在text外嵌套view并在view中进行设置 */
+
+.content_view {
+     line-height: 1.1;
+}
+
+.content_view rich-text {
+     font-size: 0.8rem;
+}
+
+.agree_text {
+     color: #0084ff;
+     font-size: 0.75rem;
+     margin-right: 35rpx;
+     padding: 5rpx 15rpx;
+     border-radius: 6rpx;
+     background-color: rgb(229, 242, 255);
+}
+
+.comment_icon {
+     width: 30rpx;
+     height: 30rpx;
+     position: absolute;
+     top: 15rpx;
+     left: 175rpx;
+}
+
+.comment-text {
+     color: #6d7688;
+     font-size: 0.75rem;
+     position: absolute;
+     top: 8rpx;
+     left: 210rpx;
+}

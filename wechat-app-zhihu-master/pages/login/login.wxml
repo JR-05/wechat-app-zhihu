@@ -1,0 +1,26 @@
+<!--pages/login/login.wxml-->
+<image src='/images/login.png' style='position:fixed;bottom:0;width:100%'></image>
+
+<view class='login-header'>
+     <view>
+          <text class='title'>我de知乎</text>
+     </view>
+     <view>
+          <text class='description'>登录我de知乎，发现更大的世界</text>
+     </view>
+</view>
+
+<view class='login-from'>
+     <form bindsubmit='formSubmit'>
+          <view>
+               <input placeholder='用户名' name="userName" value="{{userName}}" type='text' focus='true' maxlength='6'></input>
+               <input placeholder='密码' name="password" password='true' maxlength='12'></input>
+          </view>
+          <button class='login_btn' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" form-type='submit'>登录</button>
+     </form>
+</view>
+
+<view class='register'>
+     <text>没有帐号？</text>
+     <navigator url='../register/register' open-type='redirect' style='color: #0077E6;display:inline'>注册</navigator>
+</view>

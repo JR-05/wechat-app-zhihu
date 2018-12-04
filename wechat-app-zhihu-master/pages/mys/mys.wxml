@@ -1,0 +1,36 @@
+<!--pages/mys/mys.wxml-->
+<view class='mys_header'>
+     <!-- 模糊背景 -->
+     <image class='headIconBackground' src='{{userInfo.imagePath}}' mode='scaleToFill'></image>
+     <!-- 头像+名称 -->
+     <view class='image_user'>
+          <image class='headIcon' src='{{userInfo.imagePath}}' mode='scaleToFill'></image>
+          <text>{{userInfo.userName}}</text>
+     </view>
+</view>
+<view class='mys_center'>
+     <!--性别  -->
+     <view class='mys_center_item'>
+          <image src='/images/sex.png' style='width:15%;height:50rpx' mode='aspectFit'></image>
+          <text class='tag'>性别</text>
+          <text class='info'>{{userInfo.gender==1?'男 ':'女 '}}</text>
+     </view>
+     <!-- 城市 -->
+     <view class='mys_center_item'>
+          <image src='/images/city.png' style='width:15%;height:50rpx' mode='aspectFit'></image>
+          <text class='tag'>城市</text>
+          <text class='info'>{{userInfo.city}}</text>
+     </view>
+     <!-- 生日 -->
+     <view class='mys_center_item'>
+          <image src='/images/brith.png' style='width:15%;height:50rpx' mode='aspectFit'></image>
+          <text class='tag'>生日</text>
+          <text class='info'>{{userInfo.brithDay}}</text>
+     </view>
+     <!-- 语言 -->
+     <view class='mys_center_item'>
+          <image src='/images/lang.png' style='width:15%;height:50rpx' mode='aspectFit'></image>
+          <text class='tag'>语言</text>
+          <text class='info'>{{userInfo.language=='zh_CN'?'中文':'其它语言'}}</text>
+     </view>
+</view>

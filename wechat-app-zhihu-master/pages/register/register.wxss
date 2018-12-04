@@ -1,0 +1,51 @@
+/* pages/register/register.wxss */
+
+page {
+     background-color:  #F7F7F7;
+}
+
+.select_image {
+     width: 200rpx;
+     height: 200rpx;
+     margin: 150rpx 0 75rpx 0;
+     border-radius: 100rpx;
+     background-color: #ffffff;
+}
+
+.input_view {
+     width: 650rpx;
+     background: #fff;
+     display: flex;
+     flex-direction: row;
+     border-radius: 10rpx;
+     margin: 20rpx auto;
+}
+
+.input_view image {
+     align-self: center;
+     margin-left: 10rpx;
+     margin-right: 20rpx;
+     padding: 10rpx;
+}
+
+.input_view input {
+     height: 50rpx;
+     text-align: left;
+     padding-top: 10rpx;
+     font-size: 0.8rem;
+}
+
+form text {
+     width: 100%;
+     color: red;
+     font-size: 0.7rem;
+     position: absolute;
+     text-align: center;
+     margin-top: 20rpx;
+}
+
+.register_btn {
+     margin: 100rpx 80rpx;
+     background-color: #00a2ea;
+     color: white;
+}

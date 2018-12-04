@@ -1,0 +1,40 @@
+/* pages/login/login.wxss */
+
+.login-header {
+  text-align: center;
+  color: #00A2EA;
+  padding-top: 80rpx;
+  margin-bottom: 80rpx;
+}
+
+.login-header .title {
+  font-size: 1.8rem;
+}
+
+.login-header .description {
+  font-size: 1.2rem;
+}
+
+.login-from {
+  text-align: center;
+}
+
+.login-from input {
+  text-align: left;
+  margin: 0 100rpx;
+  padding: 20rpx;
+  font-size: 0.8rem;
+  border-bottom: 1rpx #EBEBEB solid;
+}
+
+.login-from .login_btn{
+  margin: 50rpx 80rpx;
+  background-color: #00A2EA;
+  color: white
+}
+
+.register{
+  text-align: center;
+  font-size: 0.8rem;
+  color: #c3c3c3
+}

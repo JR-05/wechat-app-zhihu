@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///知乎数据?serverTimezone=GMT%2B8&characterEncoding=utf-8
+    #启动时执行sql语句创建数据表和初始化数据，注意再2.0之后必须声明initialization-mode=always
+    schema: classpath:sql/question.sql
+    initialization-mode: never
+  jpa:
+      show-sql: true
+      database: mysql
+      database-platform:  org.hibernate.dialect.MySQL5InnoDBDialect #有时候如果不添加该属性的话，在关联关系表中不会生成外键
+      hibernate:
+        ddl-auto: create  #初始化时不创建表

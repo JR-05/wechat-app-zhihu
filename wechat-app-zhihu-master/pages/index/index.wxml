@@ -1,0 +1,55 @@
+<!--index.wxml-->
+
+<wxs module="utils">
+     var formateDate = function(time) {
+          var date = getDate(time);
+          return date.getFullYear() + "-" + date.getMonth() + "-" + date.getDay();
+     }
+     module.exports.formateDate = formateDate;
+</wxs>
+
+<view class="container">
+     <!-- 轮播数据-->
+     <swiper circular='{{circular}}' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" class="banners" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{banner}}" wx:key="key">
+               <swiper-item class="banner">
+                    <image src="{{item.image}}" data-id="{{item.id}}" bindtap="goToDetail" class="banner-image" width="100%" height="100%" />
+                    <text class="banner-title">{{item.title}}</text>
+               </swiper-item>
+          </block>
+     </swiper>
+     <!-- 排序 -->
+     <view class="container">
+          <view class='sortType-item'>
+               <text class='text_left'>{{sortType[0]}}</text>
+               <text class='text_right' bindtap='clickToSort'>切换为{{sortType[1]}}</text>
+          </view>
+          <!-- 焦点数据 -->
+          <block wx:for="{{questionList}}" wx:key="item">
+               <view class="question-container-item">
+                    <!-- 标题 -->
+                    <view class='title_view'>
+                         <text class='title'>{{item.title}}</text>
+                    </view>
+                    <!-- 题主信息 -->
+                    <view class='author_view'>
+                         <image src='{{item.authorImageUri}}' class='author_image'></image>
+                         <text class='author_name'>{{item.authorName}}</text>
+                         <text class='time'>{{utils.formateDate(item.createdTime)}}</text>
+                    </view>
+                    <!-- 内容 -->
+                    <view class='content_view'>
+                         <rich-text nodes="{{item.content}}"></rich-text>
+                    </view>
+
+                    <!-- 其它数据显示（点赞，评论数） -->
+                    <view style='position:relative'>
+                         <text class='agree_text'>赞同 {{item.voteupAount}}</text>
+                         <image class='comment_icon' src='/images/comment.png' style=''></image>
+                         <text class='comment-text'>评论 {{item.commentCount}}</text>
+                    </view>
+               </view>
+          </block>
+     </view>
+
+</view>
